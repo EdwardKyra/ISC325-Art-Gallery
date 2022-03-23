@@ -5,7 +5,6 @@
     width: 50%;
   }
   #Instructions {
-    border: 1px dotted blue;
     height: 400px;
     float: right;
     width: 50%;
@@ -19,6 +18,13 @@
 
   h1{
       color: #f7d85a;
+      /* font-family: 'Ceviche One', cursive;
+    font-family: 'Coiny', cursive;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Modak', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Playfair Display', serif; */
   }
 
   .nav{
@@ -49,4 +55,14 @@ a.nav:before {
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
+}
+
+section{
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.Gallery{
+    margin-bottom: 50px;
+   margin-top: 50px;
 }
