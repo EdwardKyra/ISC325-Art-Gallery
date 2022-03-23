@@ -18,13 +18,13 @@
 
   h1{
       color: #f7d85a;
-      /* font-family: 'Ceviche One', cursive;
+      font-family: 'Ceviche One', cursive;
     font-family: 'Coiny', cursive;
     font-family: 'Fredoka One', cursive;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'Modak', cursive;
     font-family: 'Permanent Marker', cursive;
-    font-family: 'Playfair Display', serif; */
+    font-family: 'Playfair Display', serif;
   }
 
   .nav{
@@ -36,26 +36,14 @@
     margin: auto;
     padding: 50px;
     width: 88%;
-    text-decoration: none;
   }
 
-  a.nav
-{
-    position: relative;
-}
-
-a.nav:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #FFF;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
+  .nav a{
+    border: black;
+    text-decoration: none;
+    color: #f7d85a;
+   
+  }
 
 section{
     padding: 50px;
@@ -65,4 +53,42 @@ section{
 .Gallery{
     margin-bottom: 50px;
    margin-top: 50px;
+}
+
+a {
+  position: relative;
+  color: #f7d85a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f7d85a;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f7d85a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+p{
+  font-family: 'Ceviche One', cursive;
+font-family: 'Coiny', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Modak', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Source Sans Pro', sans-serif;
 }
