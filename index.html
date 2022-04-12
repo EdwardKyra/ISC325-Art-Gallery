@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheet.css">
@@ -14,14 +11,16 @@
     <title>Document</title>
 </head>
 
-
     <div class="head">
     <header>
+        <div class="menu-icon"> 
+            <img src="icon.png" alt="" height="25px" onclick="togglemenu()">
+        </div> 
         <center><h1>Safe Haven </h1></center>
         <center><h1>Holocaust Refugee Shelter Museum </h1></center>
     </header>
-
-    <ul class="nav">
+    <nav>
+        <ul id="menuList">
         <li>
             <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#About">About Project</a>     
         </li>
@@ -35,81 +34,159 @@
             <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#Us">About Us</a>     
         </li>
     </ul>
+</nav>
 </div>
 
 <body>
   <section id="About">
     <h2>About the Project</h2>
-    <br><br>
-    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Vivamus id rutrum est. 
-        Donec vitae tellus at lorem tristique efficitur. 
-        Vestibulum tortor enim, pulvinar vitae mauris nec, eleifend auctor libero. 
-        Etiam bibendum ante dui, non aliquam ex ultricies nec. 
-        Nulla sit amet sollicitudin ligula. 
-        Duis euismod sapien vel urna fringilla laoreet. 
-        Nulla tincidunt neque ex, sit amet finibus mauris varius id. </p>
+    <br>
+    <p >Welcome to the Safe Haven Holocaust Refugee Shelter Museum Virtual Art Gallery! 
+        Many of you may not know that Oswego, N.Y. has countless fascinating and unique historical 
+        sites that don't get enough attention. Our virtual art gallery brings to light one of these 
+        underlooked historical sites by highlighting the narratives of the 982 refugees of World War II, 
+        who were allowed into the United States as "guests" of President Franklin D. Roosevelt. 
+        These refugees lived for almost 2 years on the grounds of Fort Ontario, and by navigating the 
+        gallery below you can get a brief glimpse into their amazing journies! We would like to give a 
+        special thanks to the Safe Haven Holocaust Refugee Shelter Museum, becuase without the work they 
+        have done this gallery would not have been possible!
+    </p>
     </section>
 
     <section id="Instructions">
     <h2 >Instructions</h2>
-      <br><br>
-      <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Vivamus id rutrum est. 
-        Donec vitae tellus at lorem tristique efficitur. 
-        Vestibulum tortor enim, pulvinar vitae mauris nec, eleifend auctor libero. 
-        Etiam bibendum ante dui, non aliquam ex ultricies nec. 
-        Nulla sit amet sollicitudin ligula. 
-        Duis euismod sapien vel urna fringilla laoreet. 
-        Nulla tincidunt neque ex, sit amet finibus mauris varius id. 
-        Vestibulum non luctus nibh. 
-        Cras id risus diam. 
+      <br>
+      <p>1. You can select to walk through the gallery
+        either as a minimized window or full screen. <br>
+        2. There are two ways to experience the
+        exhibition, one is by taking a guided tour and the
+        second is to navigate the space freely. <br>
+        3. To take a guided tour use the menu at the
+        bottom of the window, you can use the play
+        button to start the tour. Left and right arrow to go
+        the the previous/next guided point or click on the
+        down arrow to see all the guided points. <br>
+        4. Use your arrows or WSAD or just point and
+        click to move. <br>
+        5. To move the camera, click and hold on your
+        mouse/trackpad, and move the cursor to the left
+        or right. <br>
+        6. If you are interested in learning more about a
+        certain exhibit, click anywhere on the artifact and
+        either read through the included description, or
+        play the audio that goes along it. <br>
+        7. If you are interested in more 
+        detaield tutorial click on the "i" letter in
+        the upper left corner.
+    </p>
     </section>
 
     <div class="Gallery">
-            <h2 id="Exhibition"> Exhibition</h2>
-        <center>><img src="elements-of-art-thumbnail-1.jpg" alt=""></center>
+            <h2 id="Exhibition"></h2>
+            <div class="container"> 
+                <center>  <iframe class="responsive-iframe" width="700" height="500" src="https://www.artsteps.com/embed/624087ce2616313b5d6616b1/560/315" frameborder="0" allowfullscreen></iframe>
+                </center>
+              </div>
         </div>
-    <div>
+
+        <script>
+
+            var menuList = document.getElementById("menuList");
+        
+            menuList.style.maxHeight = "0px";
+        
+            function togglemenu(){
+                if (menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "300px"
+                
+            }else {
+                menuList.style.maxHeight = "0px";
+        
+            }
+            }
+        </script>
+
+        <section id="Us">
             <h2><center>About Us</center></h2>
-            <h3> Anthony Albright </h3>
-            <p>Anthony Albright is from Vestal New York and is studying information science at SUNY Oswego. 
-        After college Anthony wants to pursue a career in a start up business and make new and improved websites for them. 
+
+            <div class="flex-container">
+            <p style="font-size: 10px; padding: 20px;"><b style="font-size: 15px;">Anthony Albright</b> is from Vestal New York and is studying information science at SUNY Oswego.
+        After college Anthony wants to pursue a career in a start up business and make new and improved websites for them.
         Anthony is a second semester junior and has done a wide variety of interesting websites 
-        which makes him perfect for the coding team. </p>
-            
-            <h3> Carlos Aguirre </h3>
-            <p> Carlos Aguirre is a distinguished art collector from Queens, NY, and is currently an 
+                which makes him perfect for the coding team. </p>
+
+
+                <p style="font-size: 10px; padding: 20px;"><b style="font-size: 15px;">Carlos Aguirre</b> is a distinguished art collector from Queens, NY, and is currently an
                 undergraduate student at SUNY Oswego. Carlos is in his last semester of Operations Management & Information Systems 
                 and is looking into computer and information systems management careers. His past experiences scripting for youtube videos 
                 led him to take on the role of a writer for this project. </p>
-            
-            <h3> Giovanni Anastasio </h3>
-            <p> Giovanni Anastasio is from Albany, New York and is currently a graduate student at SUNY Oswego. 
+
+
+                <p style="font-size: 10px; padding: 20px;"><b style="font-size: 15px;">Giovanni Anastasio</b> is from Albany, New York and is currently a graduate student at SUNY Oswego.
                 Giovanni is in his second semester of the Human-Computer Interaction masters program and looks to pursue a 
-                career within UX/UI design upon graduation. Giovanni's interests and past experiences have allowed him to be 
+                career within UX/UI design upon graduation. Giovannis interests and past experiences have allowed him to be 
                 the perfect fit as a writer and programmer on our team! </p>
-            
-            <h3> Andjela Djapa </h3>
-           <p> Andjela Djapa is from Belgrade, Serbia and is currently a graduate student at SUNY Oswego. 
+
+
+                <p style="font-size: 10px; padding: 20px;"><b style="font-size: 15px;">Andjela Djapa</b> is from Belgrade, Serbia and is currently a graduate student at SUNY Oswego.
             Andjela is in her second semester of the Human-Computer Interaction masters program and looks to pursue a career in 
             frontend development/UX/UI design upon graduation. Her past experiences led her to taking on a role of a designer and 
-              programer on this team. </p>
-           
-            <h3> Kyra Edwards </h3>
-            <p> Kyra Edwardsis from Brooklyn, New York and is currently an undergraduate  at SUNY Oswego.
+               programer on this team. </p></div>
+
+            <div class="flex-container">
+                <p style="font-size: 10px;  padding: 20px;"><b style="font-size: 15px;">Kyra Edwards</b> is from Brooklyn, New York and is currently an undergraduate  at SUNY Oswego.
                 Kyra is in her junior year of the Computer Science and Information Science programs and looks to pursue a 
-                career in frontend development. Kyra’s previous classes and jobs make her fit to have the role as programmer on our team. </p>
-            
-            <h3> Snigdha Behara </h3>
-            <p> Snigdha is a graduate student majoring in Human Computer Interaction at SUNY Oswego. 
+                career in frontend development. Kyras previous classes and jobs make her fit to have the role as programmer on our team. </p>
+
+
+            <p style="font-size: 10px;  padding: 20px;"><b style="font-size: 15px;">Snigdha Behara</b> is a graduate student majoring in Human Computer Interaction at SUNY Oswego.
                 She is an avid researcher and aims to pursue a career in using technology for social good. 
-                She picked the museum as she’s an advocate for human rights issues and her research skills and love 
+                She picked the museum as shes an advocate for human rights issues and her research skills and love 
                 for writing led her to take on the role of a researcher and writer. </p>
-            
-            <h3> Tim Fletcher </h3>
-            <p> Tim Fletcher is from Syracuse, NY and is currently an undergraduate student at SUNY Oswego.
+
+
+                <p style="font-size: 10px;  padding: 20px;"><b style="font-size: 15px;">Tim Fletcher</b> is from Syracuse, NY and is currently an undergraduate student at SUNY Oswego.
                 Tim is in his senior year of the Information Science program and is looking into careers in cyber security.  
                 His past experiences led him to take on a role of a team lead and researcher. </p></div>
+        <center><button onclick="topFunction()" id="myBtn" title="Go to top">^</button></center>
+        </section>
+
+
+  <footer class="end">
+  <ul class="nav1">
+    <li>
+        <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#About">About Project</a>     
+    </li>
+    <li>
+        <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#Instructions">Instructions</a>     
+    </li>
+    <li>
+        <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#Exhibition">Exhibition</a>     
+    </li>
+    <li>
+        <a href="http://cs.oswego.edu/~kedward8/isc325/Art-Gallery/#Us">About Us</a>     
+    </li>
+  </ul></div>
+<div class="endiv">
+<p> Group Project HCI525/ISC325 - Hypermedia Group 1</p>
+<p> Date Published 12/12/12</p>
+    <p> Inspired by: Safe Haven Museum in Oswego</p></div></footer>
+
+
+<script>
+    var scrollToTopBtn = document.getElementById("myBtn");
+    var rootElement = document.documentElement;
+
+    function scrollToTop() {
+
+    rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+    })
+    }
+    scrollToTopBtn.addEventListener("click", scrollToTop)
+</script>
+
 </body>
 </html>
